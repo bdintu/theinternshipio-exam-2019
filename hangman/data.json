@@ -1,0 +1,26 @@
+{
+  "Car": [
+    {
+      "word": "Lambo",
+      "hint": "Aventador"
+    },
+    {
+      "word": "Ferra",
+      "hint": "LaFer"
+    }
+  ],
+  "Train": [
+    {
+      "word": "GE",
+      "hint": "abc"
+    },
+    {
+      "word": "GEA",
+      "hint": "def"
+    },
+    {
+      "word": "GEK",
+      "hint": "ghi"
+    }
+  ]
+}
