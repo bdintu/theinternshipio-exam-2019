@@ -1,6 +1,7 @@
-import random
-
 from data import Data
+from category import Category
+from word import Word
+from score import Score
 from view import View
 
 
@@ -8,33 +9,63 @@ class Game:
 
     def __init__(self, data):
         self._data = data
+        self._score = Score()
 
-        self.category = None
-        self.seed = 4848
-        self.nums_shuffle = []
+        self._category = None
+        self._iter_category = None
+        self._word = None
 
     def displayCategory(self):
         cat = self._data.getHeadCategorys()
         View.displayCategory(cat)
 
-    def selectCategory(self):
-        cat_id = input("select: ")
+    def selectCategory(self, category_id=0):
+        head = self._data.getHeadCategorys()
+        category = self._data.getCategory(head[category_id])
+        self._category = Category(category)
+        self._iter_category = iter(self._category)
+
+    def inputCategory(self):
+        category_id = input("select: ")
         try:
-            cat_id = int(cat_id)
+            category_id = int(category_id)
         except ValueError:
             print('press key integer')
-            self.selectCategory()
+            self.inputCategory()
 
         head = self._data.getHeadCategorys()
-        if cat_id in range(head.__len__()):
-            self.category = self._data.getCategory(head[cat_id])
-        else:
+        if not category_id in range(head.__len__()):
             print('press key in range')
-            self.selectCategory()
+            self.inputCategory()
 
+        return category_id
 
-    def _random(self):
-        self._nums_shuffle = [i for i in range()]
-        random.shuffle(self._nums_shuffle)
+    def genWord(self):
+        self._word = next(self._iter_category)
 
+    def displayHint(self):
+        View.displayHint(self._word.getHint())
+        
+    def displayAskWord(self, char=''):
+        askword = self._word.getAskWord()
+        score = self._score.getScore()
+        wrong_guess  = self._score.getWrongGuess()
+        View.displayAskWord(askword, score, wrong_guess, char)
 
+    def checkAskWord(self, char=''):
+        hint_word = self._word.checkAskWord(char)
+        if hint_word:
+            self._score.addScore()
+            return True
+        elif self._score.getScore() == 0:
+            self._score.delWrongGuess()
+        else:
+            self._score.delScore()
+
+        return False
+
+    def isEndGame(self):
+        return self._score.getWrongGuess() == 0
+
+    def isWordPass(self):
+        return self._word.isPass()
