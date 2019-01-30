@@ -10,6 +10,7 @@ class Score:
 
     def delScore(self):
         self._wrong_guess = self._wrong_guess -1
+        self.delWrongGuess()
 
     def delWrongGuess(self):
         self._score = self._score - self._k

@@ -10,9 +10,9 @@ class View:
         print()
         print('Hint:', '"'+hint+'"')
 
-    def displayAskWord(askword, score, wrong_guess, char):
+    def displayAskWord(askword, score, wrong_guess, char, wrong):
         print(askword, end='')
-        if wrong_guess:
+        if wrong:
             print(' score {0}, remaining wrong guess {1}'.format(score, wrong_guess))
         else:
             print(' score {0}, remaining wrong guess {1}, wrong guessed: {2}'.format(score, wrong_guess, char))

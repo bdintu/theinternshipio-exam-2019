@@ -10,6 +10,7 @@ class Category:
         self._nums_shuffle = []
 
         self._initialCategoty()
+        self._cut10word()
 
     def _initialCategoty(self):
         self._random()
@@ -18,6 +19,9 @@ class Category:
         end = self._category.__len__()
         self._nums_shuffle = [i for i in range(end)]
         random.shuffle(self._nums_shuffle)
+
+    def _cut10word(self):
+        self._nums_shuffle = self._nums_shuffle[:10]
 
     def __iter__(self):
         for i in self._nums_shuffle:

@@ -39,7 +39,7 @@ class Word:
             self._dict.pop(char)
 
     def getAskWord(self):
-        return ''.join(self._askword)
+        return ' '.join(self._askword)
 
     def getWord(self):
         return self._word

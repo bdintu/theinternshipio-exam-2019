@@ -46,11 +46,11 @@ class Game:
     def displayHint(self):
         View.displayHint(self._word.getHint())
         
-    def displayAskWord(self, char=''):
+    def displayAskWord(self, char='', wrong=False):
         askword = self._word.getAskWord()
         score = self._score.getScore()
         wrong_guess  = self._score.getWrongGuess()
-        View.displayAskWord(askword, score, wrong_guess, char)
+        View.displayAskWord(askword, score, wrong_guess, char, wrong)
 
     def checkAskWord(self, char=''):
         hint_word = self._word.checkAskWord(char)
