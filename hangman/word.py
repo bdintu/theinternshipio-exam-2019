@@ -12,8 +12,8 @@ class Word:
         self._genDict()
         self._genAskWord()
 
-        if self._word:
-            self._cut1Word()
+#        if self._word:
+#            self._cut1Word()
 
     def _genDict(self):
         for i in range(self._word.__len__()):
