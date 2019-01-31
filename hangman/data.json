@@ -1,26 +1,46 @@
 {
-  "Car": [
+  "Web": [
     {
-      "word": "Lambo",
-      "hint": "Aventador"
+      "word": "Github",
+      "hint": "The world's leading software development platform"
     },
     {
-      "word": "Ferra",
-      "hint": "LaFer"
+      "word": "Netflix",
+      "hint": "Watch TV Shows Online, Watch Movies Online"
+    },
+    {
+      "word": "Spotify",
+      "hint": "Music for everyone"
+    },
+    {
+      "word": "Twitter",
+      "hint": "It's what's happening."
+    },
+    {
+      "word": "Medium",
+      "hint": "a place to read and write big ideas and important stories"
     }
   ],
-  "Train": [
+  "Programming Language": [
     {
-      "word": "GE",
-      "hint": "abc"
+      "word": "C++",
+      "hint": "... is a general-purpose programming language. It has imperative, object-oriented and generic programming features, while also providing facilities for low-level memory manipulation."
     },
     {
-      "word": "GEA",
-      "hint": "def"
+      "word": "Python",
+      "hint": "... has a design philosophy that emphasizes code readability, notably using significant whitespace. It provides constructs that enable clear programming on both small and large scales."
     },
     {
-      "word": "GEK",
-      "hint": "ghi"
+      "word": "Go",
+      "hint": "... is syntactically similar to C, but with the added benefits of memory safety, garbage collection, structural typing, and CSP-style concurrency."
+    },
+    {
+      "word": "Java",
+      "hint": "... is a general-purpose computer-programming language that is concurrent, class-based, object-oriented, and specifically designed to have as few implementation dependencies as possible."
+    },
+    {
+      "word": "Assembly",
+      "hint": "... is a any low-level programming language in which there is a very strong correspondence between the program's statements and the architecture's machine code instructions."
     }
   ]
 }
