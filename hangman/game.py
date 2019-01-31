@@ -13,7 +13,7 @@ class Game:
 
         self._category = None
         self._iter_category = None
-        self._word = None
+        self._word = Word()
 
     def displayCategory(self):
         cat = self._data.getHeadCategorys()
@@ -26,7 +26,7 @@ class Game:
         self._iter_category = iter(self._category)
 
     def inputCategory(self):
-        category_id = input("select: ")
+        category_id = input(">> ")
         try:
             category_id = int(category_id)
         except ValueError:
@@ -44,7 +44,7 @@ class Game:
         self._word = next(self._iter_category)
 
     def displayHint(self):
-        View.displayHint(self._word.getHint())
+        View.displayHint(self._word.getHint(), self._category.getCurIndex())
         
     def displayAskWord(self, char='', wrong=False):
         askword = self._word.getAskWord()
@@ -64,8 +64,13 @@ class Game:
 
         return False
 
+    def displayBye(self):
+        score = self._score.getScore()
+        wrong_guess  = self._score.getWrongGuess()
+        View.displayBye(score, wrong_guess)
+
     def isEndGame(self):
-        return self._score.getWrongGuess() == 0
+        return self._score.getWrongGuess() == 0 or self._category.isStop()
 
     def isWordPass(self):
         return self._word.isPass()

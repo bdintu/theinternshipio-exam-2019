@@ -1,3 +1,6 @@
+import random
+
+
 class Word:
 
     def __init__(self, word='', hint=''):
@@ -8,6 +11,9 @@ class Word:
 
         self._genDict()
         self._genAskWord()
+
+        if self._word:
+            self._cut1Word()
 
     def _genDict(self):
         for i in range(self._word.__len__()):
@@ -21,6 +27,10 @@ class Word:
     def _genAskWord(self):
         self._askword = list('_'*self._word.__len__())
 
+    def _cut1Word(self):
+        rand_index = random.randint(0, self._word.__len__()) -1
+        self._removeDict(self._word[rand_index])
+
     def checkAskWord(self, char):
         if char in self._dict:
             self._removeDict(char)
@@ -32,6 +42,9 @@ class Word:
         self._askword[index] = char
 
     def _removeDict(self, char):
+        if not char:
+            char = self._word[index]
+        
         index = self._dict[char].pop(0)
         self._addAskWord(index, char)
 
