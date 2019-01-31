@@ -43,6 +43,10 @@ class Word:
     def _sumAlpha(self):
         return sum(i.isalpha() for i in self._word)
 
+    def _cut1Word(self):
+        rand_index = random.randint(0, self._word.__len__()) -1
+        self._removeDict(self._word[rand_index])
+
     def checkAskWord(self, char):
         if char in self._dict:
             self._removeDict(char)
