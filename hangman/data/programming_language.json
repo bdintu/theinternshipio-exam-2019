@@ -1,0 +1,24 @@
+{
+  "Programming Language": [
+    {
+      "word": "C++",
+      "hint": "... is a general-purpose programming language. It has imperative, object-oriented and generic programming features, while also providing facilities for low-level memory manipulation."
+    },
+    {
+      "word": "Python 3.7",
+      "hint": "... has a design philosophy that emphasizes code readability, notably using significant whitespace. It provides constructs that enable clear programming on both small and large scales."
+    },
+    {
+      "word": "Go 1.11",
+      "hint": "... is syntactically similar to C, but with the added benefits of memory safety, garbage collection, structural typing, and CSP-style concurrency."
+    },
+    {
+      "word": "Java 11",
+      "hint": "... is a general-purpose computer-programming language that is concurrent, class-based, object-oriented, and specifically designed to have as few implementation dependencies as possible."
+    },
+    {
+      "word": "Assembly",
+      "hint": "... is a any low-level programming language in which there is a very strong correspondence between the program's statements and the architecture's machine code instructions."
+    }
+  ]
+}
