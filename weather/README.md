@@ -20,12 +20,12 @@ cd theinternshipio-exam-2019
 
 ## Install
 ```sh
+cd weather
 pip install -r requirements.txt
 ```
 
 ## Run
 ```python
-cd weather
 python weather.py -f <INPUT.xml> -o <OUTPUT.json>
 ```
 
