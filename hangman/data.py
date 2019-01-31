@@ -1,22 +1,31 @@
+import os
 import sys
 import json
 
 
 class Data:
 
-    def __init__(self, data_path=""):
-        self._filename = data_path
-        self._data = None
+    def __init__(self, data_path='data/'):
+        self._data_path = data_path
+        self._data = {}
 
-        self.loads()
+        self._loadPath()
 
-    def loads(self):
-        try:
-            with open(self._filename) as fp:
-                self._data = json.loads(fp.read())
-        except FileNotFoundError:
-            print('FileNotFoundError')
+    def _loadPath(self):
+        listdir = os.listdir(self._data_path)
+        
+        if listdir.__len__() <2:
+            print('dataset < 2 file')
             sys.exit(1)
+
+        for filename in listdir:
+            path = os.path.join(self._data_path, filename)
+            self._loadFile(path)
+
+    def _loadFile(self, path):
+        try:
+            with open(path) as fp:
+                self._data.update(json.loads(fp.read()))
         except json.decoder.JSONDecodeError:
             print('JSONDecodeError')
             sys.exit(1)

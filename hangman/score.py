@@ -9,11 +9,10 @@ class Score:
         self._score = self._score + self._k
 
     def delScore(self):
-        self._wrong_guess = self._wrong_guess -1
-        self.delWrongGuess()
+        self._score = self._score -self._k
 
     def delWrongGuess(self):
-        self._score = self._score - self._k
+        self._wrong_guess = self._wrong_guess -1
 
     def __if__(self):
         return self._wrong_guess == 0
