@@ -34,7 +34,7 @@ class Category:
             self._i = self._i + 1
 
     def isStop(self):
-        return self._i +1 == self._N
+        return self._i == self._N
 
     def getCurIndex(self):
         return (self._i, self._N)
