@@ -14,7 +14,7 @@ Bundit Seedao
 # How to run
 ## Clone
 ```sh
-git clone https://gitlab.com/bdintu/theinternshipio-exam-2019.git
+git clone https://github.com/bdintu/theinternshipio-exam-2019.git
 cd theinternshipio-exam-2019
 ```
 

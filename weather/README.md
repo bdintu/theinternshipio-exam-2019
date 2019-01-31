@@ -1,5 +1,5 @@
 # The Internship Program Developer Exam 2019
-## Path 1 (weather)
+## Path 2 (weather)
 
 # Contact
 ## Name
@@ -14,7 +14,7 @@ Bundit Seedao
 # How to run
 ## Clone
 ```sh
-git clone https://gitlab.com/bdintu/theinternshipio-exam-2019.git
+git clone https://github.com/bdintu/theinternshipio-exam-2019.git
 cd theinternshipio-exam-2019
 ```
 
